@@ -24,12 +24,17 @@ class SingleLinkedList:
 		if self.head.data == item:
                 	self.head = current
                         current = current.next
+			length -= 1
 
 		while current:
 			if current.data == item:
 				prev.next = current.next
 				current = current.next
+				length -= 1
 				continue
+
+	def size():
+		return length
 
 	def printList(self):
 		node = self.head
