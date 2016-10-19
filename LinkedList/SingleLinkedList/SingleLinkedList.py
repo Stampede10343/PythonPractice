@@ -18,6 +18,19 @@ class SingleLinkedList:
                 currentNode.next = Node(item)
                 self.length += 1
 
+	def remove(self, item):
+		current = self.head.next
+
+		if self.head.data == item:
+                	self.head = current
+                        current = current.next
+
+		while current:
+			if current.data == item:
+				prev.next = current.next
+				current = current.next
+				continue
+
 	def printList(self):
 		node = self.head
 		print node.getData()
